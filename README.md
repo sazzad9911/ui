@@ -3,15 +3,15 @@ We are using-
 1. React Router Dom 2. Material Icon 3. Redux 4. Material Theme 5. Google Fonts
 
 ## Get Start
-Download the root folder in your system. You can use GitHub desktop or gitBash. Clone and the run the command 'npm install'
-After successfuly installed all modules you can run those files using 'npm start'
+Download the root folder in your system. You can use GitHub desktop or gitBash. Clone and the run the command `npm install`
+After successfuly installed all modules you can run those files using `npm start`
 
 ## Defalut content example
 ### Loader
 set Loading State--
 
-import { useDispatch } from 'react-redux';
-import { loader } from '../action';
+import { useDispatch } from 'react-redux'; \n
+import { loader } from '../action'; \n
 const Component=()=>{
   const dispatch = useDispatch()
   return(
