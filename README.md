@@ -1,12 +1,28 @@
-# Getting Started with Create React App
+# Scientistx Web UI
+We are using-
+1. React Router Dom 2. Material Icon 3. Redux 4. Material Theme 5. Google Fonts
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Get Start
+Download the root folder in your system. You can use GitHub desktop or gitBash. Clone and the run the command 'npm install'
+After successfuly installed all modules you can run those files using 'npm start'
 
-## Available Scripts
+## Defalut content example
+### Loader
+set Loading State--
 
-In the project directory, you can run:
-
-### `npm start`
+import { useDispatch } from 'react-redux';
+import { loader } from '../action';
+const Component=()=>{
+  const dispatch = useDispatch()
+  return(
+      <div>
+         <button onClick={()=>dispatch(loader(true,'it happens'))}>Load</button>
+      </div>
+    )
+}
+export default Component;
+* the loader function has 2 parameter boolean and string
+* one is for show or hide and one is for set the string
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
