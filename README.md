@@ -10,7 +10,7 @@ After successfuly installed all modules you can run those files using `npm start
 ### Loader
 set Loading State--
 
-`import { useDispatch } from 'react-redux'; <br/>
+import { useDispatch } from 'react-redux'; <br/>
 import { loader } from '../action';<br/>
 const Component=()=>{<br/>
   const dispatch = useDispatch()<br/>
@@ -20,7 +20,7 @@ const Component=()=>{<br/>
       </div><br/>
     )<br/>
 }<br/>
-export default Component;`<br/>
+export default Component;<br/>
 * the loader function has 2 parameter boolean and string
 * one is for show or hide and one is for set the string
 
