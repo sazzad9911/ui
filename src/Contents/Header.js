@@ -29,10 +29,10 @@ const Header = () => {
             </div>
             <div>
                 <div style={{
-                    fontSize: '30px'
+                    fontSize: '34px',
                 }} className="left">
                     <Wave text="Scientistx" effect="stretch"
-                        effectDuration={0.9} effectDelay={0.8} effectChange={0.4} />
+                        effectDuration={0.9} effectDelay={0.9} effectChange={0.7} />
                 </div>
                 <div className="right">
 
