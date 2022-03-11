@@ -6,8 +6,18 @@ import { Wave } from 'react-animated-text';
 import IconSet from './IconSet'
 
 const Header = () => {
+    const [header,setHeader]=React.useState('fixed');
+    React.useEffect(() => {
+        window.onscroll=()=>{
+            setHeader('fixed')
+        }
+    },[])
     return (
-        <div className="header">
+        <div style={{
+            position: 'absolute',
+            zIndex:.8,
+            top:0
+        }} className="header">
             <div>
                 <div className="left">
                     <IconSet/>

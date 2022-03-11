@@ -3,7 +3,7 @@ import React from 'react';
 const UserInfo = () => {
     return (
         <div>
-            <h1>Hi, Md Shariar</h1>
+            <h1 style={{color: 'black'}}>Hi, Md Shariar</h1>
         </div>
     );
 };
