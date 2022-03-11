@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 body { 
-  font-family: 'Crimson Pro', serif;
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
 }
+
 .App{
   font-size: 30px;
   
