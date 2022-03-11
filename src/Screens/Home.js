@@ -31,7 +31,7 @@ const Home = () => {
                     </div>
                 </div>
             </ParallaxLayer>
-            <ParallaxLayer offset={1} speed={2} style={{ backgroundColor: '#ff6d6d' }} />
+            <ParallaxLayer offset={1} speed={.5} style={{ backgroundColor: '#ff6d6d' }} />
             <ParallaxLayer
                 offset={1}
                 speed={0.8}
@@ -44,7 +44,6 @@ const Home = () => {
                 <OurProject/>
             </ParallaxLayer>
             <ParallaxLayer offset={2} speed={2} style={{ backgroundColor: '#ff6d6d' }} />
-
             <ParallaxLayer
                 offset={2}
                 speed={0.5}
