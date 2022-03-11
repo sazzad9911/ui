@@ -1,0 +1,12 @@
+.f{
+height: 30px;
+width: 30px;
+border-radius: 5%;
+margin: 2px;
+font-size: 25px;
+transition: font-size 2s linear 1s;
+
+}
+.f :hover{
+    font-size:35px;
+}
