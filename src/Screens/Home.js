@@ -4,6 +4,8 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import Slider from '../Contents/Slider'
 import Footer from '../Contents/Footer'
 import OurProject from '../Contents/OurProject'
+import UserInfo from '../Contents/UserInfo';
+import './Css/Home.css'
 
 const Home = () => {
 
@@ -19,14 +21,10 @@ const Home = () => {
                     flexWrap: 'wrap',
                     width: '100%',
                 }}>
-                    <div style={{
-                        width:'50%',
-                    }}>
-
+                    <div className='home-div'>
+                    <UserInfo/>
                     </div>
-                    <div style={{
-                        width:'50%',
-                    }}>
+                    <div className='home-div'>
                         <Slider />
                     </div>
                 </div>
