@@ -4,18 +4,22 @@ import {
     Facebook,
     Twitter,
     Instagram,
-    YouTube,
-    Call,
-    Email,
-    WatchLater
+    YouTube
 } from '@mui/icons-material'
+
 const IconSet = () => {
+    
     return (
         <div>
-            <div className='f'> <Facebook /></div>
-            <div className='f'><Twitter /></div>
-            <div className='f'><Instagram /></div>
-            <div className='f'><YouTube /></div>
+            <div className='f'> <Facebook style={{
+                fontSize: '40px',
+                '&:hover':{
+                    fontSize:'50px'
+                }
+            }}/></div>
+            <div className='f'><Twitter/></div>
+            <div className='f'><Instagram/></div>
+            <div className='f'><YouTube/></div>
         </div>
 
     );
