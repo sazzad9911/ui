@@ -8,8 +8,8 @@ import { faFacebookF, faYoutube, faTwitter, faInstagram } from '@fortawesome/fre
 library.add(faFacebookF);
 
 const IconSet = () => {
-
     return (
+<<<<<<< HEAD
         <div className='s'>
             <div className='f'>
                 <FontAwesomeIcon  icon="fa-brands fa-facebook-f" />
@@ -24,6 +24,13 @@ const IconSet = () => {
                 <FontAwesomeIcon icon={faYoutube} />
             </div>
         </div>
+=======
+        <IconContext.Provider value={{ color: "blue", className: "global-class-name" }}>
+            <div>
+               
+            </div>
+        </IconContext.Provider>
+>>>>>>> b8f5e8fd037a78d38b75a5cd30d4c9a2da20c9a7
     );
 };
 
