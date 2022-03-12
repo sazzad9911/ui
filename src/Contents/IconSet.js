@@ -4,10 +4,9 @@ import { IconContext } from "react-icons";
 
 const IconSet = () => {
 
-    return ( <
-        div >
-        <
-        /div>
+    return ( 
+        <div >
+        </div>
 
 
 
