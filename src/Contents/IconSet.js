@@ -1,13 +1,13 @@
 import React from 'react';
-import {
-    Facebook, Twitter, Instagram, YouTube
-    , Call, Email, WatchLater
-} from '@mui/icons-material'
+import './CSS/IconSet.css';
+
 const IconSet = () => {
+
     return (
-        <div className="root">
-           
+        <div>
+            
         </div>
+
     );
 };
 

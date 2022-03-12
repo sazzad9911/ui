@@ -1,0 +1,8 @@
+.home-div{
+    width: 50%;
+}
+@media (max-width: 800px) {
+    .home-div{
+        width: 100%;
+    }
+}
