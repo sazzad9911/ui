@@ -3,11 +3,12 @@ import './CSS/IconSet.css';
 import { IconContext } from "react-icons";
 
 const IconSet = () => {
-
-    return ( 
-        <div >
-        </div>
-
+    return (
+        <IconContext.Provider value={{ color: "blue", className: "global-class-name" }}>
+            <div>
+               
+            </div>
+        </IconContext.Provider>
 
 
     );
