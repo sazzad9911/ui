@@ -5,14 +5,18 @@ import Slider from '../Contents/Slider'
 import Footer from '../Contents/Footer'
 import OurProject from '../Contents/OurProject'
 import UserInfo from '../Contents/UserInfo';
-import './Css/Home.css'
+import './Css/Home.css';
+import { useDispatch } from 'react-redux';
+import {alert} from '../action'
+import Post from '../Contents/Post'
+import Graph from '../Contents/Graph'
 
 const Home = () => {
-
+    const dispatch = useDispatch();
     return (
         <div>
             <Header />
-            <Parallax pages={3} style={{ top: '0', left: '0' }}>
+            <Parallax pages={4} style={{ top: '0', left: '0' }}>
                 <ParallaxLayer
                     offset={0}
                     speed={2.5}
@@ -31,7 +35,7 @@ const Home = () => {
                         </div>
                     </div>
                 </ParallaxLayer>
-                <ParallaxLayer offset={1} speed={.5} style={{ backgroundColor: '#ff6d6d' }} />
+                <ParallaxLayer offset={1} speed={.5} style={{ backgroundColor: 'rgba(163, 163, 163, 0.317)' }} />
                 <ParallaxLayer
                     offset={1}
                     speed={0.8}
@@ -43,7 +47,7 @@ const Home = () => {
                     }}>
                     <OurProject />
                 </ParallaxLayer>
-                <ParallaxLayer offset={2} speed={2} style={{ backgroundColor: '#ff6d6d' }} />
+                <ParallaxLayer offset={2} speed={2} style={{ backgroundColor: 'rgba(163, 163, 163, 0.317)' }} />
                 <ParallaxLayer
                     offset={2}
                     speed={0.5}
@@ -53,7 +57,19 @@ const Home = () => {
                         alignItems: 'center',
                         color: 'white',
                     }}>
-                    <Footer />
+                    <Post/>
+                </ParallaxLayer>
+                <ParallaxLayer offset={3} speed={.5} style={{ backgroundColor: 'rgba(163, 163, 163, 0.317)' }} />
+                <ParallaxLayer
+                    offset={3}
+                    speed={0.5}
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        color: 'white',
+                    }}>
+                    <Graph/>
                 </ParallaxLayer>
             </Parallax>
         </div>

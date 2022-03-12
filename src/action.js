@@ -16,3 +16,9 @@ export const loader=(state,text) => {
         playload:{state:state,text:text}
     }
 }
+export const alert=(state,head,text) => {
+    return {
+        type: 'ALERT',
+        playload:{state:state,text:text,head:head}
+    }
+}
