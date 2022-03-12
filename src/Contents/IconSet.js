@@ -9,8 +9,6 @@ const IconSet = () => {
                
             </div>
         </IconContext.Provider>
-
-
     );
 };
 
