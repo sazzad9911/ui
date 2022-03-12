@@ -1,12 +1,16 @@
 import React from 'react';
 import './CSS/IconSet.css';
+import { IconContext } from "react-icons";
 
 const IconSet = () => {
 
     return (
-        <div>
-            
-        </div>
+        <IconContext.Provider value={{ color: "blue", className: "global-class-name" }}>
+            <div>
+                <FaFolder />
+            </div>
+        </IconContext.Provider>
+
 
     );
 };
