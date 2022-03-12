@@ -1,11 +1,13 @@
-.f {
-height: 30px;
-width: 30px;
-border-radius: 5px;
-margin: 2px;
-font-size: 25px;
-transition: font-size 2s linear 1s;
+.f{
+    height: auto;
+    width: auto;
 }
-.f :hover{
-    font-size:30px;
+.ff{
+    font-size: 130px;
+    transition: 2s linear 3s;
+    cursor: pointer;
+}
+
+.f.ff:hover{
+    font-size: 35px;
 }
