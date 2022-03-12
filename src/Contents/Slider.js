@@ -1,8 +1,10 @@
 import { Button } from "@mui/material";
+import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from 'swiper';
 import "./CSS/swiper.min.css";
 import { Link } from "react-router-dom";
+import { orange, purple } from "@mui/material/colors";
 //for arrow
 //import "./components/pagination/pagination.min.css"
 //import "./components/navigation/navigation.min.css"
@@ -16,68 +18,81 @@ import SwiperCore, {
 
 const Slider = () => {
     SwiperCore.use([EffectCoverflow, Autoplay, Pagination, Navigation]);
+
+    const theme = createTheme({
+        palette: {
+            secondary: {
+                main: orange[500],
+            },
+            primary: {
+                main: purple[500],
+            }
+        },
+    })
     return (
 
-        <div className="mySwiper">
-            <Swiper
+        <ThemeProvider theme={theme}>
+            <div className="mySwiper">
+                <Swiper
 
-                navigation={true}
-                effect={"coverflow"}
-                centeredSlides={true}
-                slidesPerView={window.innerWidth < 768 ? "auto" : "auto"}
-                loop={true}
-                autoplay={{
-                    delay: 3500,
-                    disableOnInteraction: false
-                }}
-                coverflowEffect={{
-                    rotate: 50,
-                    stretch: 0,
-                    depth: 400,
-                    modifier: 1,
-                    slideShadows: true
-                }}
-                pagination={{
-                    clickable: true
-                }}
-            >
-                <SwiperSlide>
-                    <img className="slider" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSNswHqc5j4AtjMxoXcfQO9GHuF-ze93P52A&usqp=CAU" alt="img1" />
-                    <div className="slider-content">
-                        <div className="slider-bottom"> 
-                        <p>
-                            Hello! I am Md. Nahiduzzaman. I am your business partner. Do you know about ma? If not then you can press the Button.......
-                        </p>
-                        <Button href="https://www.facebook.com/md.nahiduzzamann/" size="small" variant="outlined">Click Me</Button>
+                    navigation={true}
+                    effect={"coverflow"}
+                    centeredSlides={true}
+                    slidesPerView={window.innerWidth < 768 ? "auto" : "auto"}
+                    loop={true}
+                    autoplay={{
+                        delay: 3500,
+                        disableOnInteraction: false
+                    }}
+                    coverflowEffect={{
+                        rotate: 50,
+                        stretch: 0,
+                        depth: 400,
+                        modifier: 1,
+                        slideShadows: true
+                    }}
+                    pagination={{
+                        clickable: true
+                    }}
+                >
+                    <SwiperSlide>
+                        <img className="slider" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSNswHqc5j4AtjMxoXcfQO9GHuF-ze93P52A&usqp=CAU" alt="img1" />
+                        <div className="slider-content">
+                            <div className="slider-bottom">
+                                <p>
+                                    Hello! I am Md. Nahiduzzaman. I am your business partner. Do you know about ma? If not then you can press the Button.......
+                                </p>
+                                <Button th href="https://www.facebook.com/md.nahiduzzamann/" size="small" variant="outlined">Click Me</Button>
+                            </div>
                         </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img className="slider" src="https://i2.wp.com/arabicmehndidesign.com/wp-content/uploads/2020/11/Download-100-Islamic-Dp-For-Whatsapp-HD-Pics-Best-Images-1.png?ssl=1" alt="img2" />
-                    <div className="slider-content">
-                        
-                    <div className="slider-bottom"> 
-                        <p>
-                        Hello! I am Md. Nahiduzzaman. I am your business partner. Do you know about ma? If not then you can press the Button.......
-                        </p>
-                        <Button href="https://www.facebook.com/md.nahiduzzamann/" size="small" variant="outlined">Click Me</Button>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img className="slider" src="https://i2.wp.com/arabicmehndidesign.com/wp-content/uploads/2020/11/Download-100-Islamic-Dp-For-Whatsapp-HD-Pics-Best-Images-1.png?ssl=1" alt="img2" />
+                        <div className="slider-content">
+
+                            <div className="slider-bottom">
+                                <p>
+                                    Hello! I am Md. Nahiduzzaman. I am your business partner. Do you know about ma? If not then you can press the Button.......
+                                </p>
+                                <Button href="https://www.facebook.com/md.nahiduzzamann/" size="small" variant="outlined">Click Me</Button>
+                            </div>
                         </div>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide >
-                    <img className="slider" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtw7lhQtGxsKO1q-t3wnTZEsGcvw0APA3B02a9ghtjxRZH-AdYbIXNyt2hhd6yoWAFO9k&usqp=CAU" alt="img3" />
-                    <div className="slider-content">
-                       
-                    <div className="slider-bottom"> 
-                        <p>
-                        Hello! I am Md. Nahiduzzaman. I am your business partner. Do you know about ma? If not then you can press the Button.......
-                        </p>
-                        <Button href="https://www.facebook.com/md.nahiduzzamann/" size="small" variant="outlined">Click Me</Button>
+                    </SwiperSlide>
+                    <SwiperSlide >
+                        <img className="slider" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtw7lhQtGxsKO1q-t3wnTZEsGcvw0APA3B02a9ghtjxRZH-AdYbIXNyt2hhd6yoWAFO9k&usqp=CAU" alt="img3" />
+                        <div className="slider-content">
+
+                            <div className="slider-bottom">
+                                <p>
+                                    Hello! I am Md. Nahiduzzaman. I am your business partner. Do you know about ma? If not then you can press the Button.......
+                                </p>
+                                <Button href="https://www.facebook.com/md.nahiduzzamann/" size="small" variant="outlined">Click Me</Button>
+                            </div>
                         </div>
-                    </div>
-                </SwiperSlide>
-            </Swiper>
-        </div>
+                    </SwiperSlide>
+                </Swiper>
+            </div>
+        </ThemeProvider>
 
     );
 };
