@@ -46,7 +46,7 @@ const Slider = () => {
                     <div className="slider-content">
                         <div className="slider-bottom"> 
                         <p>
-                            Hello! I am sunny lion. I am your sex partner. Do you know about ma? If not then you can press the Button.......
+                            Hello! I am Md. Nahiduzzaman. I am your business partner. Do you know about ma? If not then you can press the Button.......
                         </p>
                         <Button href="https://www.facebook.com/md.nahiduzzamann/" size="small" variant="outlined">Click Me</Button>
                         </div>
@@ -58,7 +58,7 @@ const Slider = () => {
                         
                     <div className="slider-bottom"> 
                         <p>
-                            Hello! I am sunny lion. I am your sex partner. Do you know about ma? If not then you can press the Button.......
+                        Hello! I am Md. Nahiduzzaman. I am your business partner. Do you know about ma? If not then you can press the Button.......
                         </p>
                         <Button href="https://www.facebook.com/md.nahiduzzamann/" size="small" variant="outlined">Click Me</Button>
                         </div>
@@ -70,7 +70,7 @@ const Slider = () => {
                        
                     <div className="slider-bottom"> 
                         <p>
-                            Hello! I am sunny lion. I am your sex partner. Do you know about ma? If not then you can press the Button.......
+                        Hello! I am Md. Nahiduzzaman. I am your business partner. Do you know about ma? If not then you can press the Button.......
                         </p>
                         <Button href="https://www.facebook.com/md.nahiduzzamann/" size="small" variant="outlined">Click Me</Button>
                         </div>
