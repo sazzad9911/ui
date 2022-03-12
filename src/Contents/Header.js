@@ -15,7 +15,7 @@ const Header = () => {
     return (
         <div style={{
             position: 'absolute',
-            zIndex:.8,
+            zIndex:1,
             top:0
         }} className="header">
             <div>
