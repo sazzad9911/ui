@@ -5,7 +5,7 @@ import img2 from '../Files/search-engine.png';
 
 const Graph = () => {
     return (
-        <div className='overall'>
+        <div className='overall'> 
             <div className='leftportion'>
                 <div className='leftheader'>
                     <p>We listen and work together to create a truly unique experience.</p>
