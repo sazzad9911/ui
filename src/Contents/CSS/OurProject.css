@@ -4,11 +4,12 @@
 
 .txt{
     text-align: center;
+    color:aliceblue
 }
 
 .box{
     height: 300px;
-    width: 300px;
+    width: 300px; 
     margin: 10px;
     
     border-radius: 7px;
@@ -28,11 +29,10 @@
     
 }
 .boxxxx{
-    margin: auto;
+
     height: 40px;
     width: 40px;
     background-color: rgb(151, 35, 197);
-    margin-top: 5px;
     border-radius:50%;
     
 }
@@ -49,7 +49,7 @@
     
 }
 .t{
-    color: rgb(5, 5, 5);
+    color: rgb(255, 255, 255);
     
 }
 .box,

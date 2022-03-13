@@ -33,7 +33,7 @@ function App() {
   }
   return (
     <div>
-      <ParticlesBg type="lines" num={50} bg={style.canvas} />
+      <ParticlesBg type="lines" num={10} bg={style.canvas} />
       <Routes>
         <Route path='/Career' element={<Career />} />
         <Route path='/About' element={<About />} />
