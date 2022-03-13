@@ -7,7 +7,7 @@ import OurProject from '../Contents/OurProject'
 import UserInfo from '../Contents/UserInfo';
 import './Css/Home.css';
 import { useDispatch } from 'react-redux';
-import {alert} from '../action'
+import { alert } from '../action'
 import Post from '../Contents/Post'
 import Graph from '../Contents/Graph'
 
@@ -25,13 +25,13 @@ const Home = () => {
                         display: 'flex',
                         flexWrap: 'wrap',
                         width: '100%',
-                        marginTop:'120px'
+                        marginTop: '120px'
                     }}>
                         <div className='home-div'>
                             <UserInfo />
                         </div>
                         <div className='home-div'>
-                            <Slider />
+                            <Slider/>
                         </div>
                     </div>
                 </ParallaxLayer>
@@ -57,7 +57,7 @@ const Home = () => {
                         alignItems: 'center',
                         color: 'white',
                     }}>
-                    <Post/>
+                    <Post />
                 </ParallaxLayer>
                 <ParallaxLayer offset={3} speed={.5} style={{ backgroundColor: 'rgba(163, 163, 163, 0.317)' }} />
                 <ParallaxLayer
@@ -69,7 +69,7 @@ const Home = () => {
                         alignItems: 'center',
                         color: 'white',
                     }}>
-                    <Graph/>
+                    <Graph />
                 </ParallaxLayer>
             </Parallax>
         </div>
