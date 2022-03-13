@@ -31,7 +31,7 @@ const Post = () => {
             <Slider {...settings}>
                 <div className="slide">
                     <div className="slide-left">
-                        <img height={200} width={200} src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png' />
+                        <img height={400} width={300} src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png' />
                     </div>
                     <div className="slide-right">
                         <h3>What is React Native?</h3>
@@ -71,7 +71,7 @@ const Post = () => {
                 </div >
                 <div className="slide">
                     <div className="slide-left">
-                        <img height={300} width={300} src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png' />
+                        <img height={400} width={300} src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png' />
                     </div>
                     <div className="slide-right">
                         <h3>What is React Native?</h3>
