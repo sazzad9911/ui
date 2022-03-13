@@ -9,9 +9,12 @@ import LoadingButton from '@mui/lab/LoadingButton';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 import SendIcon from '@mui/icons-material/Send';
+import { useSelector } from "react-redux";
 
 
 const Post = () => {
+    const theme= useSelector(state=>state.PageSettings.isDark)
+
     const settings = {
         dots: false,
         infinite: true,
@@ -31,10 +34,12 @@ const Post = () => {
             <Slider {...settings}>
                 <div className="slide">
                     <div className="slide-left">
-                        <img height={400} width={300} src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png' />
+                        <img height={300} width={300} src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png' />
                     </div>
                     <div className="slide-right">
-                        <h3>What is React Native?</h3>
+                        <h3 style={{
+                            color: theme?'white':'black'
+                        }}>What is React Native?</h3>
                         <p>React Native combines the best parts of native development with React, a best-in-class JavaScript library for building user interfaces.</p>
                         <div className="comment">
                             <Box
@@ -71,7 +76,7 @@ const Post = () => {
                 </div >
                 <div className="slide">
                     <div className="slide-left">
-                        <img height={400} width={300} src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png' />
+                        <img height={300} width={300} src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png' />
                     </div>
                     <div className="slide-right">
                         <h3>What is React Native?</h3>
