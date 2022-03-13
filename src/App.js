@@ -10,8 +10,12 @@ import Alert from './Contents/Alert';
 import Canvas from './Contents/Canvas';
 import Graphic from './Files/Graphic.svg'
 import ParticlesBg from 'particles-bg'
+import React from 'react'
+import {useSelector} from 'react-redux'
 
 function App() {
+  const theme=useSelector(state=>state.PageSettings.isDark)
+
   const style = {
     canvas: {
       width: '100%',
@@ -33,7 +37,14 @@ function App() {
   }
   return (
     <div>
-      <ParticlesBg type="lines" num={50} bg={style.canvas} />
+      {
+        theme?
+        (
+          <ParticlesBg type="lines" num={10} bg={style.canvas} />
+        ):(
+          <div style={style.canvas}></div>
+        )
+      }
       <Routes>
         <Route path='/Career' element={<Career />} />
         <Route path='/About' element={<About />} />

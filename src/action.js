@@ -22,3 +22,9 @@ export const alert=(state,head,text) => {
         playload:{state:state,text:text,head:head}
     }
 }
+export const setTheme=(state) => {
+    return {
+        type: 'THEME',
+        playload:state
+    }
+}
