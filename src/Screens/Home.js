@@ -16,7 +16,7 @@ const Home = () => {
     return (
         <div>
             <Header />
-            <Parallax pages={4} style={{ top: '0', left: '0' }}>
+            <Parallax pages={5} style={{ top: '0', left: '0' }}>
                 <ParallaxLayer
                     offset={0}
                     speed={2.5}
@@ -38,7 +38,7 @@ const Home = () => {
                 <ParallaxLayer offset={1} speed={.5} style={{ backgroundColor: 'rgba(163, 163, 163, 0.317)' }} />
                 <ParallaxLayer
                     offset={1}
-                    speed={0.8}
+                    speed={1.5}
                     style={{
                         display: 'flex',
                         justifyContent: 'center',
@@ -47,10 +47,10 @@ const Home = () => {
                     }}>
                     <OurProject />
                 </ParallaxLayer>
-                <ParallaxLayer offset={2} speed={2} style={{ backgroundColor: 'rgba(163, 163, 163, 0.317)' }} />
+                <ParallaxLayer offset={2} speed={1} style={{ backgroundColor: 'rgba(163, 163, 163, 0.317)' }} />
                 <ParallaxLayer
                     offset={2}
-                    speed={0.5}
+                    speed={2}
                     style={{
                         display: 'flex',
                         justifyContent: 'center',
@@ -59,10 +59,10 @@ const Home = () => {
                     }}>
                     <Post />
                 </ParallaxLayer>
-                <ParallaxLayer offset={3} speed={.5} style={{ backgroundColor: 'rgba(163, 163, 163, 0.317)' }} />
+                <ParallaxLayer offset={3} speed={1.5} style={{ backgroundColor: 'rgba(163, 163, 163, 0.317)' }} />
                 <ParallaxLayer
                     offset={3}
-                    speed={0.5}
+                    speed={2}
                     style={{
                         display: 'flex',
                         justifyContent: 'center',
@@ -70,6 +70,29 @@ const Home = () => {
                         color: 'white',
                     }}>
                     <Graph />
+                </ParallaxLayer>
+                <ParallaxLayer offset={4} speed={2} style={{ backgroundColor: 'rgba(163, 163, 163, 0.317)' }} />
+                <ParallaxLayer
+                    offset={4}
+                    speed={2.5}
+                    style={{
+                        display: 'block',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        color: 'white',
+                    }}>
+                   <div style={{
+                       height: '50%',
+                       width:'100%'
+                   }}>
+
+                   </div>
+                   <div style={{
+                       height: '50%',
+                       width:'100%'
+                   }}>
+                   <Footer/>
+                   </div>
                 </ParallaxLayer>
             </Parallax>
         </div>
