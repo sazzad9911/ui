@@ -4,7 +4,7 @@ const initialState={
         state:false
     },
     alert:{
-        state:true,
+        state:false,
         head:'No Head',
         text:'Loading...',
     }

@@ -3,7 +3,7 @@ import './CSS/OurProject.css';
 
 const OurProject = () => {
     return (
-        < div >
+        <div>
         <div>
             <h1 className='txt'>Our Projects</h1>
         </div>
@@ -11,7 +11,7 @@ const OurProject = () => {
             <div className='box'>
                 <div className='boxxx'>
                     <div className='boxxxx'> 
-                        <text id='f'>1</text> 
+                        <p id='f'>1</p> 
                     </div>
                     <div className='txtxt'>
                         <p className='t'>Recent Projects</p>
@@ -21,7 +21,7 @@ const OurProject = () => {
             <div className='box'>
                 <div className='boxxx'>
                     <div className='boxxxx'>
-                    <text id='f'>2</text> 
+                    <p id='f'>2</p> 
                     </div>
                     <div className='txtxt'>
                         <p className='t'>Upcoming Projects</p>
@@ -31,7 +31,7 @@ const OurProject = () => {
             <div className='box'>
                 <div className='boxxx'>
                     <div className='boxxxx'>
-                        <text id='f'>3</text>   
+                        <p id='f'>3</p>   
                     </div>
                     <div className='txtxt'>
                         <p className='t'>Previous Projects</p>
@@ -39,7 +39,7 @@ const OurProject = () => {
                 </div>
             </div>
         </div>
-        </div >
+        </div>
     );
 };
 

@@ -9,6 +9,7 @@ import Loader from './Contents/Loader'
 import Alert from './Contents/Alert';
 import Canvas from './Contents/Canvas';
 import Graphic from './Files/Graphic.svg'
+import ParticlesBg from 'particles-bg'
 
 function App() {
   const style = {
@@ -18,8 +19,10 @@ function App() {
       position: 'absolute',
       top: '0px',
       left: '0px',
-      backgroundImage: 'url('+Graphic+')',
-      backgroundSize: 'cover'
+      backgroundImage: 'url(' + Graphic + ')',
+      backgroundSize: 'cover',
+      zIndex: -1,
+      color: '#ffff'
 
     },
     img: {
@@ -28,11 +31,9 @@ function App() {
 
     }
   }
-
   return (
     <div>
-      <canvas style={style.canvas}>
-      </canvas>
+      <ParticlesBg type="lines" num={50} bg={style.canvas} />
       <Routes>
         <Route path='/Career' element={<Career />} />
         <Route path='/About' element={<About />} />

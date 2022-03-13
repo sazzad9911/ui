@@ -16,7 +16,11 @@
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+
     "chart.js": "^3.7.1",
+
+    "particles-bg": "^2.5.5",
+
     "react": "^17.0.2",
     "react-animate-text": "^0.4.0",
     "react-animated-text": "^0.1.4",
