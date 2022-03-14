@@ -1,72 +1,86 @@
 .footerbody{
-    height:100%;
+    height: 100%;
     width: 100%;
     display: flex;
-    border-top-left-radius: 215px 215px ;
+    border-top-left-radius: 200px 180px;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.187);
-    background-color:rgba(85, 0, 255, 0.13);
+    background-color:rgba(85, 0, 255, 0.13)
+}
+.footerbodyone{
+    width: 50%;
+    display: flex;
+}
+.footerIconSetf{
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    margin: 3px;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 50%;
+}
+.ficon{
+    display: flex;
     text-align: center;
-    
-}
-.footerbodyf{
-    height: auto;
-    width:24.5%;
-    border-top-left-radius: 215px 215px ;
-    margin: 1px;
-}
-.footerbodys{
-    height: auto;
-    width: 24%;
-    background-color: rgb(24, 98, 168);
-    margin: 1px;
-}
-.footerbodystxt{
-    margin-top: 50%;
-}
-.footerbodyt{
-    height: auto;
-    width:24%;
-    background-color: rgb(71, 100, 76);
-    margin: 1px;
-}
-.footerbodyfo{
-    height: auto;
-    width: 24%;
-    background-color: rgb(121, 114, 58);
-    margin: 1px;
-}
-.footerscientistxicon{
-    height: 35%;
-    margin-left: 10px;
-    width: 95%;
-    border-top-left-radius: 200px 200px ;
-    margin-top: 25%;
-}
-.footerIconSetbox{
-    height: 25%;
-    width: auto;
     justify-content: center;
     align-items: center;
 }
-.footertxt{
-    height:25%;
-    width: auto;
-    color: rgb(250, 250, 250);
+.bodyftop{
+    height: 80px;
 }
-.footerIconSets{
-    height: 250px;
-    width: 250px;
-    display: flex;
-    margin: 2px;
+.bodyf{
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.bodys{
+    width: 50%;
+    background-color: rgb(145, 45, 45);
+}
+.footerbodytwo{
+    width: 50%;
+    background-color: aqua;
+}
 
-}
-.footerIconSetf{
-    font-size: 30px;
-    height: 43px;
-    width: 50px;
-    margin: 5%;
-    color: black;
+.bodyth{
+    width: 50%;
     background-color: aliceblue;
-    border-radius: 50%;
-    
 }
+.bodyfo{
+    width: 50%;
+    background-color: black;
+}
+
+
+
+/*
+<div className='footerbodyf'>
+                <div className='footerscientistxicon'>
+                    <img src={png} height="120px" width="auto" />
+                </div>
+                <div className='footertxt'>
+                    <p>This is the site for something new innovation.You can build with us any project.</p>
+                </div>
+                <div className='footerIconSetbox'>
+                    <div className='footerIconSets'>
+                        <div className='footerIconSetf'>
+                            <FontAwesomeIcon icon="fa-brands fa-facebook-f" />
+                        </div>
+                        <div className='footerIconSetf'>
+                            <FontAwesomeIcon icon={faTwitter} />
+                        </div>
+                        <div className='footerIconSetf'>
+                            <FontAwesomeIcon icon={faInstagram} />
+                        </div>
+                        <div className='footerIconSetf'>
+                            <FontAwesomeIcon icon={faYoutube} />
+                        </div>
+                    </div>
+                </div>
+</div>
+
+
+
+<p className='footerbodystxt'>ABOUT<br />SERVICES<br />JOB OPPORTUNITIES<br />CALENDER OF EVENTS<br />LOCATION</p>
+*/
