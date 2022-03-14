@@ -52,10 +52,10 @@
     color: rgb(255, 255, 255);
     
 }
+
 .box,
 .boxx,
 .boxxx,
 .boxxxx:hover{
-    transition: all;
-    
+
 }
