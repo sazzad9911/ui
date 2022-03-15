@@ -61,13 +61,14 @@
     text-align: center;
     align-items: center;
 }
-@media screen and (max-height: 450px) {
+@media screen and (min-height: 850px) {
     .footerbodyone{
-        width: 50%;
+        width: 100%;
         display: flex;
+        
     }
     .footerbodytwo{
-        width: 50%;
+        width: 100%;
         display: flex;
     }
     
