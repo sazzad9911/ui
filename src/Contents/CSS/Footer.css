@@ -36,20 +36,41 @@
 }
 .bodys{
     width: 50%;
-    background-color: rgb(145, 45, 45);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+#txt{
+    margin-top: 40%;
 }
 .footerbodytwo{
     width: 50%;
-    background-color: aqua;
+    display: flex;
 }
 
 .bodyth{
     width: 50%;
-    background-color: aliceblue;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
 }
 .bodyfo{
     width: 50%;
-    background-color: black;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+@media screen and (max-height: 450px) {
+    .footerbodyone{
+        width: 50%;
+        display: flex;
+    }
+    .footerbodytwo{
+        width: 50%;
+        display: flex;
+    }
+    
 }
 
 
