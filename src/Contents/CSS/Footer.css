@@ -61,7 +61,7 @@
     text-align: center;
     align-items: center;
 }
-@media screen and (max-height: 450px) {
+@media screen and (min-height: 360px) {
     .footerbodyone{
         width: 100%;
         display: flex;
