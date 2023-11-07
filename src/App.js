@@ -14,9 +14,11 @@ import React from "react";
 import { useSelector } from "react-redux";
 import MainLayout from "./Layouts/MainLayout";
 import useDarkSide from "./Hooks/useDarkSide";
+import { BottomDrawer } from "./Contents/Header";
 
 function App() {
   const theme = useSelector((state) => state.PageSettings.isDark);
+  
 
   const style = {
     canvas: {
@@ -39,7 +41,7 @@ function App() {
       left: "0px",
       zIndex: 0,
       color: "#ffff",
-      backgroundColor:"#ffffff91"
+      backgroundColor:"#ffffffd2"
     },
     img: {
       width: "100%",
@@ -57,15 +59,16 @@ function App() {
         </div>
       )}
       <Routes>
-        <Route path="/Career" element={<Career />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Members" element={<Members />} />
-        <Route path="/Services" element={<Services />} />
+        <Route path="/career" element={<MainLayout component={<Career />}/>} />
+        <Route path="/about" element={<MainLayout component={<About />}/>} />
+        <Route path="/products" element={<MainLayout component={<Services />}/>} />
+        <Route path="/services" element={<MainLayout component={<Services />}/>} />
 
         {
           //for using single link add link here
         }
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<MainLayout component={<Home />}/>} />
+        <Route path="*" element={<MainLayout component={<div />}/>} />
       </Routes>
       {
         //authentication page will situate here
@@ -73,6 +76,7 @@ function App() {
       <SingleLinkRoute />
       <Loader />
       <Alert />
+      
     </div>
   );
 }

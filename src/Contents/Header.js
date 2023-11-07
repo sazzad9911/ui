@@ -6,23 +6,32 @@ import IconSet from "./IconSet";
 import ThemeSwitch from "./ThemeSwitch";
 import useDarkSide from "../Hooks/useDarkSide";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setThem } from "../action";
 import { useMediaQuery } from "usehooks-ts";
 import MenuIcon from "@mui/icons-material/Menu";
 import { CgMenuGridO } from "react-icons/cg";
-import { Box, Drawer, Skeleton, SwipeableDrawer, Typography } from "@mui/material";
+import {
+  Box,
+  Drawer,
+  Skeleton,
+  SwipeableDrawer,
+  Typography,
+} from "@mui/material";
 import { grey } from "@mui/material/colors";
 import styled from "@emotion/styled";
+import useMenu from "../Hooks/useMenu";
+import { Link, useLocation } from "react-router-dom";
+import { MdAvTimer, MdOutlineCall, MdOutlineEmail } from "react-icons/md";
 
-const Header = () => {
-  const [header, setHeader] = React.useState(true);
+const Header = ({ open, setOpen, header }) => {
   const [colorTheme, setTheme] = useDarkSide();
   const [darkSide, setDarkSide] = useState(
     colorTheme === "light" ? true : false
   );
-  const [open, setOpen] = useState(false);
-  const matches = useMediaQuery("(min-width: 768px)");
+  const theme = useSelector((state) => state.PageSettings.isDark);
+  //const [open, setOpen] = useState(false);
+
   const dispatch = useDispatch();
 
   const toggleDarkMode = (checked) => {
@@ -33,18 +42,19 @@ const Header = () => {
 
   React.useEffect(() => {
     dispatch(setThem(darkSide));
-  }, [darkSide]);
+  }, [darkSide,theme]);
   return (
     <div className="">
       <div
         style={{
           position: "fixed",
           zIndex: 1,
-          top: 0,
+          top: header ? 0 : -120,
           left: 0,
           overflow: "hidden",
+          transition: " top 0.3s",
         }}
-        className="bg-[#5500ff21]  w-full px-5 py-2 hidden lg:block"
+        className="bg-[#5500ff21] w-full px-5 py-2 hidden lg:block"
       >
         <div className="flex  justify-between">
           <div className="flex items-center">
@@ -52,22 +62,22 @@ const Header = () => {
             <div className="ml-4" />
             <ThemeSwitch onChange={toggleDarkMode} value={darkSide} />
           </div>
-          <div className="flex w-[610px] ">
+          <div className="flex mr-2  font-thin text-[14px]">
             <div className="flex items-center">
-              <Call />
+              <MdOutlineCall />
               <p className="ml-2">+8801761143991</p>
             </div>
             <div className="flex items-center ml-2">
-              <Email />
+              <MdOutlineEmail />
               <p className="ml-2">info@scientistx.com</p>
             </div>
             <div className="flex items-center ml-2">
-              <WatchLater />
+              <MdAvTimer />
               <p className="ml-2">SUN - THU 10:00 pm - 1:00 am</p>
             </div>
           </div>
         </div>
-        <div className=" ">
+        <div className="flex items-center justify-between">
           <div
             style={{
               fontSize: "34px",
@@ -82,7 +92,14 @@ const Header = () => {
               effectChange={0.7}
             />
           </div>
-          <div className="right"></div>
+          <div className="flex gap-6 mr-2 font-semibold ">
+            <Linker name={"Home"} route={"/"} />
+            <Linker name={"Services"} route={"/services"} />
+            <Linker name={"Products"} route={"/products"} />
+            <Linker name={"News"} route={"/news"} />
+            <Linker name={"Career"} route={"/career"} />
+            <Linker name={"About"} route={"/about"} />
+          </div>
         </div>
       </div>
 
@@ -100,6 +117,7 @@ const Header = () => {
           style={{
             fontSize: "34px",
             alignItems: "flex-start",
+            marginTop: "-5px",
           }}
         >
           <Wave
@@ -110,37 +128,39 @@ const Header = () => {
             effectChange={0.7}
           />
         </div>
-        <div className="text-black">
-          <CgMenuGridO
-            onClick={() => setOpen(true)}
-            size={30}
-            className="text-[#000]"
-          />
+        <div>
+          <CgMenuGridO onClick={() => setOpen(true)} size={30} />
         </div>
       </div>
-      <BottomDrawer open={open} setOpen={setOpen} />
     </div>
   );
 };
 
 export default Header;
-const BottomDrawer = ({ open, setOpen }) => {
-  const drawerBleeding = 56;
-  const StyledBox = styled(Box)(({ theme }) => ({
-    //backgroundColor: theme.palette.mode === "light" ? "#fff" : grey[800],
-  }));
-
-  const Puller = styled(Box)(({ theme }) => ({
-    width: 30,
-    height: 6,
-   // backgroundColor: theme.palette.mode === "light" ? grey[300] : grey[900],
-    borderRadius: 3,
-    position: "absolute",
-    top: 8,
-    left: "calc(50% - 15px)",
-  }));
+export const BottomDrawer = ({ open, setOpen }) => {
+  const drawerBleeding = 20;
   const container =
     window !== undefined ? () => window.document.body : undefined;
+  const [colorTheme, setTheme] = useDarkSide();
+  const [darkSide, setDarkSide] = useState(
+    colorTheme === "light" ? true : false
+  );
+  const theme = useSelector((state) => state.PageSettings.isDark);
+
+  //const [open, setOpen] = useState(false);
+
+  const dispatch = useDispatch();
+
+  const toggleDarkMode = (checked) => {
+    //console.log(colorTheme);
+    setTheme(colorTheme);
+    setDarkSide((v) => !v);
+    
+  };
+
+  React.useEffect(() => {
+    dispatch(setThem(darkSide));
+  }, [darkSide]);
   return (
     <SwipeableDrawer
       container={container}
@@ -154,33 +174,75 @@ const BottomDrawer = ({ open, setOpen }) => {
         keepMounted: true,
       }}
     >
-      <StyledBox
-        sx={{
-          position: "absolute",
-          top: 20,
-          borderTopLeftRadius: 8,
-          borderTopRightRadius: 8,
-          visibility: "visible",
-          right: 0,
-          left: 0,
-          height:"20px"
-        }}
-      >
-        <Puller />
-        <Typography sx={{ p: 2, color: "text.secondary" }}>
-          51 results
-        </Typography>
-      </StyledBox>
-      <StyledBox
-        sx={{
-          px: 2,
-          pb: 2,
-          height: "50vh",
-          overflow: "auto",
-        }}
-      >
-        <Skeleton variant="rectangular" height="50vh" />
-      </StyledBox>
+      <div className="absolute top-[-20px] flex justify-center items-center bg-white dark:bg-[#1b1b1b]  rounded-tl-[20px] rounded-tr-[20px] left-0 h-5 w-full">
+        <div className="h-[7px] w-8 bg-gray-400 rounded-2xl" />
+      </div>
+      <div className="h-[65vh] overflow-y-scroll dark:text-white bg-white dark:bg-[#1b1b1b] px-4">
+        <div className=" text-xl">Menus</div>
+        <div className="flex flex-wrap gap-4 font-semibold mt-4">
+          <Linker name={"Home"} route={"/"} />
+          <Linker name={"Services"} route={"/services"} />
+          <Linker name={"Products"} route={"/products"} />
+          <Linker name={"News"} route={"/news"} />
+          <Linker name={"Career"} route={"/career"} />
+          <Linker name={"About"} route={"/about"} />
+        </div>
+        <div className="flex justify-between flex-wrap border-t border-dashed mt-4">
+          <div className="flex items-center">
+            <IconSet />
+            <div className="ml-4" />
+            <ThemeSwitch onChange={toggleDarkMode} value={darkSide} />
+          </div>
+          <div className="flex flex-wrap gap-2  font-thin text-[14px]">
+            <div className="flex items-center">
+              <MdOutlineCall />
+              <p className="ml-2">+8801761143991</p>
+            </div>
+            <div className="flex items-center ">
+              <MdOutlineEmail />
+              <p className="ml-2">info@scientistx.com</p>
+            </div>
+            <div className="flex items-center">
+              <MdAvTimer />
+              <p className="ml-2">SUN - THU 10:00 pm - 1:00 am</p>
+            </div>
+          </div>
+        </div>
+        <div className=" text-xl mt-4">About Us</div>
+        <div className="text-xs mt-2 text-justify">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing
+        </div>
+        <div className="text-sm my-4">@ Powered by ScientitX Organization</div>
+      </div>
     </SwipeableDrawer>
+  );
+};
+const Linker = ({ route, name, className }) => {
+  const pathname = useLocation().pathname;
+  const [hover, setHover] = useState(false);
+
+  return (
+    <div
+      onMouseEnter={() => {
+        setHover(true);
+      }}
+      onMouseLeave={() => setHover(false)}
+      className={`${pathname === route && "dark:text-yellow-300 text-blue-600"}  ${className}`}
+    >
+      <Link to={route}>{name}</Link>
+      <div
+        style={{
+          width: hover ? 35 : 0,
+        }}
+        className={`link mx-auto dark:bg-yellow-300 bg-blue-600`}
+      />
+    </div>
   );
 };
