@@ -5,13 +5,13 @@ import Switch from '@mui/material/Switch';
 import { useSelector,useDispatch } from 'react-redux';
 import {setTheme} from '../action'
 
-const ThemeSwitch = () => {
+const ThemeSwitch = ({value,onChange}) => {
   const theme= useSelector(state=>state.PageSettings.isDark)
   const dispatch = useDispatch()
 
     const MaterialUISwitch = styled(Switch)(({ theme }) => ({
-        width: 62,
-        height: 34,
+        width: 56,
+        height: 32,
         padding: 7,
         '& .MuiSwitch-switchBase': {
           margin: 1,
@@ -33,8 +33,8 @@ const ThemeSwitch = () => {
         },
         '& .MuiSwitch-thumb': {
           backgroundColor: theme.palette.mode === 'dark' ? '#003892' : '#001e3c',
-          width: 32,
-          height: 32,
+          width: 29,
+          height: 29,
           '&:before': {
             content: "''",
             position: 'absolute',
@@ -57,8 +57,8 @@ const ThemeSwitch = () => {
       }));
     return (
         <FormControlLabel
-        control={<MaterialUISwitch sx={{ m: 1 }} checked={theme} 
-          onChange={()=>dispatch(setTheme(!theme))}
+        control={<MaterialUISwitch sx={{ m: 1 }} checked={value} 
+          onChange={onChange}
         />}
         label=" "
       />

@@ -5,7 +5,6 @@ import Slider from '../Contents/Slider'
 import Footer from '../Contents/Footer'
 import OurProject from '../Contents/OurProject'
 import UserInfo from '../Contents/UserInfo';
-import './Css/Home.css';
 import { useDispatch } from 'react-redux';
 import { alert } from '../action'
 import Post from '../Contents/Post'
@@ -14,12 +13,7 @@ import Graph from '../Contents/Graph'
 const Home = () => {
     const dispatch = useDispatch();
     const parallaxRef = useRef()
-    const onScroll = () =>
-        console.log(parallaxRef.current.current / parallaxRef.current.space)
-
-    useEffect(() => {
-        console.log(parallaxRef.current.current / parallaxRef.current.space)
-    },[])
+    
     return (
         <div>
             <Header />
