@@ -18,16 +18,9 @@ const Home = () => {
       <ParallaxLayer
         offset={0}
         speed={0.5}
-        style={{ display: "inline-block", justifyContent: "center" }}
+        style={{ display: "flex", justifyContent: "center" }}
       >
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            width: "100%",
-            marginTop: "120px",
-          }}
-        >
+        <div className=" max-w-[1500px]  flex">
           <div>
             <UserInfo />
           </div>

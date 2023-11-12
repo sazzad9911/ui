@@ -44,7 +44,7 @@ const Header = ({ open, setOpen, header }) => {
     dispatch(setThem(darkSide));
   }, [darkSide,theme]);
   return (
-    <div className="">
+    <div className=" ">
       <div
         style={{
           position: "fixed",
@@ -54,9 +54,9 @@ const Header = ({ open, setOpen, header }) => {
           overflow: "hidden",
           transition: " top 0.3s",
         }}
-        className="bg-[#5500ff21] w-full px-5 py-2 hidden lg:block"
+        className="bg-[#5500ff21] w-full  px-5 py-2 hidden lg:block"
       >
-        <div className="flex  justify-between">
+        <div className="flex mx-auto max-w-[1500px] justify-between">
           <div className="flex items-center">
             <IconSet />
             <div className="ml-4" />
@@ -77,7 +77,7 @@ const Header = ({ open, setOpen, header }) => {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between mx-auto max-w-[1500px]">
           <div
             style={{
               fontSize: "34px",

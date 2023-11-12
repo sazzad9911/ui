@@ -49,6 +49,7 @@ export default function MainLayout({ component, page }) {
             height: `calc(50% - 20}px)`,
             overflow: "visible",
           },
+          
         }}
       />
       <Header header={header} open={open} setOpen={setOpen} />
@@ -59,7 +60,7 @@ export default function MainLayout({ component, page }) {
         onScroll={(e) => {
           console.log(e.currentTarget);
         }}
-        on
+        
       >
         {component}
         <ParallaxLayer
