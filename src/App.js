@@ -15,6 +15,7 @@ import { useSelector } from "react-redux";
 import MainLayout from "./Layouts/MainLayout";
 import useDarkSide from "./Hooks/useDarkSide";
 import { BottomDrawer } from "./Contents/Header";
+import Viewer from "./Contents/anim";
 
 function App() {
   const theme = useSelector((state) => state.PageSettings.isDark);
@@ -48,6 +49,7 @@ function App() {
       height: "100%",
     },
   };
+ // return <Viewer/>
   return (
     <div className="dark:text-white text-[#0e0e31]">
       {theme ? (

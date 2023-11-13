@@ -53,10 +53,10 @@ export default function MainLayout({ component, page }) {
         }}
       />
       <Header header={header} open={open} setOpen={setOpen} />
-      <Parallax
+      <Parallax 
         ref={parallaxRef}
         pages={page ? page : 5}
-        style={{ top: "0", left: "0" }}
+        style={{ top: "0", left: "0", }}
         onScroll={(e) => {
           console.log(e.currentTarget);
         }}

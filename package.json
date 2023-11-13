@@ -14,22 +14,27 @@
     "@mui/material": "^5.5.0",
     "@react-icons/all-files": "^4.1.0",
     "@react-spring/parallax": "^9.4.3",
+    "@react-three/drei": "9.77.1",
+    "@react-three/fiber": "8.2.2",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "@types/three": "0.143.0",
     "chart.js": "^3.7.1",
     "particles-bg": "^2.5.5",
-    "react": "^17.0.2",
+    "react": "18.2.0",
     "react-animate-text": "^0.4.0",
     "react-animated-text": "^0.1.4",
     "react-chartjs-2": "^4.0.1",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
+    "react-countup": "^6.5.0",
+    "react-dom": "18.2.0",
+    "react-icons": "4.4.0",
     "react-image": "^4.0.3",
     "react-lottie": "^1.2.3",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.2",
-    "react-scripts": "5.0.0",
+    "react-scripts": "5.0.1",
+    "react-simple-typewriter": "^5.0.1",
     "react-slick": "^0.28.1",
     "react-social-icons": "^5.11.0",
     "react-spring": "^9.4.3",
@@ -37,6 +42,7 @@
     "rxjs": "^7.5.5",
     "slick-carousel": "^1.8.1",
     "swiper": "^8.0.7",
+    "three": "0.143.0",
     "usehooks-ts": "^2.9.1",
     "web-vitals": "^2.1.4"
   },
@@ -65,6 +71,7 @@
     ]
   },
   "devDependencies": {
+    "react-scripts": "4.0.3",
     "tailwindcss": "^3.3.5"
   }
 }

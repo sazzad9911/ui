@@ -1,32 +1,26 @@
 import React, { useRef, useEffect } from "react";
 import Header from "../Contents/Header";
 import { Parallax, ParallaxLayer, useScroll } from "@react-spring/parallax";
-import Slider from "../Contents/Slider";
-import Footer from "../Contents/Footer";
-import OurProject from "../Contents/OurProject";
-import UserInfo from "../Contents/UserInfo";
 import { useDispatch } from "react-redux";
 import { alert } from "../action";
 import Post from "../Contents/Post";
 import Graph from "../Contents/Graph";
+import Viewer from "../Contents/anim";
+import StartBox from "../Contents/Home/StartBox";
+import OurProject from "../Contents/Home/OurProject";
 
 const Home = () => {
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div >
       <ParallaxLayer
         offset={0}
         speed={0.5}
         style={{ display: "flex", justifyContent: "center" }}
       >
-        <div className=" max-w-[1500px]  flex">
-          <div>
-            <UserInfo />
-          </div>
-          <div>
-            <Slider />
-          </div>
+        <div className=" max-w-[1500px] w-full ">
+          <StartBox/>
         </div>
       </ParallaxLayer>
       <ParallaxLayer
@@ -44,7 +38,7 @@ const Home = () => {
           color: "black",
         }}
       >
-        <OurProject />
+        <OurProject/>
       </ParallaxLayer>
       <ParallaxLayer
         offset={2}
